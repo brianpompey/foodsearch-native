@@ -12,7 +12,7 @@ const SearchScreen = () => {
             params: {
                 limit: 50,
                 term,
-                location: 'new york'
+                location: 'New York City'
             }
         });
         setResults(response.data.businesses);
