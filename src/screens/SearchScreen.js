@@ -16,9 +16,9 @@ const SearchScreen = () => {
         })
     }
 
-    
+    //console.log(filterResultsByPrice('$$') === [])
     return(
-        <View>
+        <>
             <SearchBar 
                 term={term} 
                 onTermChange={setTerm} 
@@ -26,16 +26,13 @@ const SearchScreen = () => {
             
             />
             {errorMessage ? <Text>{errorMessage}</Text> : null}
-            <Text>
-                We have found {results.length} results
-            </Text>
             <ScrollView>
                 <RestaurantList results={filterResultsByPrice('$')} title="Cost Effective" />
                 <RestaurantList results={filterResultsByPrice('$$')} title="A Bit Pricier" />
                 <RestaurantList results={filterResultsByPrice('$$$')} title="Big Spender" />
                 {/* <RestaurantList results={filterResultsByPrice('$$$$')} title="You Rich Rich" />  */}
             </ScrollView>
-        </View>
+        </>
     )
 };
 
