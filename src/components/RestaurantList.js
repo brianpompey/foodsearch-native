@@ -13,7 +13,7 @@ const RestaurantList = ({ title, results }) => {
                 data={results}
                 keyExtractor={(result) => result.id}
                 renderItem={({ item }) => {
-                    return <RestaurantsDetail />
+                    return <RestaurantsDetail  result ={item} />;
                 }}
             />
         </View>
