@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 //import useResults from '../hooks/useResults';
 import RestaurantsDetail from './RestaurantsDetail';
+import { withNavigation } from 'react-navigation';
 
 
 const RestaurantList = ({ title, results, navigation }) => {
@@ -37,4 +38,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default RestaurantList;
+export default withNavigation(RestaurantList);
