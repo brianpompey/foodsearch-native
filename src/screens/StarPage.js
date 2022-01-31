@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from 'react-native';
+import StarRating from "../components/StarRating";
 
 const StarPage = () => {
     return(
         <View>
-            <Text>Star StarPage
-            </Text>
+            <StarRating />
+            <StarRating />
+            <StarRating />
         </View>
     )
 };
