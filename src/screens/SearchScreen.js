@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
 import RestaurantList from '../components/RestaurantList';
+import StarRating from '../components/StarRating';
 
 const SearchScreen = ({ navigation }) => {
     const [term, setTerm] = useState('');
