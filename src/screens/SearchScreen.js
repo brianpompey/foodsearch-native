@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
 import RestaurantList from '../components/RestaurantList';
 
-const SearchScreen = () => {
+const SearchScreen = ({ navigation }) => {
     const [term, setTerm] = useState('');
     const [searchApi, results, errorMessage] = useResults();
     
@@ -19,6 +19,10 @@ const SearchScreen = () => {
     //console.log(filterResultsByPrice('$$') === [])
     return(
         <>
+            <Button 
+                onPress={() => navigation.navigate('Star')}
+                title="Go to Star Page"
+            />
             <SearchBar 
                 term={term} 
                 onTermChange={setTerm} 
